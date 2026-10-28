@@ -1,0 +1,15 @@
+[theme]
+base = "light"
+primaryColor = "#A58BC9"
+backgroundColor = "#FCF9FF"
+secondaryBackgroundColor = "#F3EDF8"
+textColor = "#554C63"
+font = "Poppins"
+headingFont = "Poppins"
+showWidgetBorder = true
+showSidebarBorder = true
+borderColor = "#E9E2F0"
+dataframeBorderColor = "#E9E2F0"
+dataframeHeaderBackgroundColor = "#F0EAF7"
+dataframeHeaderTextColor = "#625770"
+chartCategoricalColors = ["#B9A2D7", "#A8D3C3", "#F1C8B6", "#B9D4EC", "#E7D8A9", "#D9BFD9"]
