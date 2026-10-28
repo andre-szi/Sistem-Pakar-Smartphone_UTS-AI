@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "name": "Sistem Pakar Diagnosis Kerusakan Smartphone",
+    "version": "1.0",
+    "note": "Basis pengetahuan awal disusun dari heuristik umum servis smartphone. Nilai CF bersifat estimasi awal dan WAJIB divalidasi dengan teknisi/pakar serta literatur kredibel (lihat README bagian Validasi Pengetahuan)."
+  },
+  "symptoms": {
+    "G01": {"text": "Layar tidak merespons sentuhan", "category": "Layar & Sentuhan"},
+    "G02": {"text": "Layar retak atau pecah", "category": "Layar & Sentuhan"},
+    "G03": {"text": "Muncul garis, bercak, atau warna tidak normal di layar", "category": "Layar & Sentuhan"},
+    "G04": {"text": "Layar berkedip (flicker)", "category": "Layar & Sentuhan"},
+    "G05": {"text": "Layar gelap padahal HP terasa menyala (ada getar/suara)", "category": "Layar & Sentuhan"},
+    "G06": {"text": "Baterai cepat habis", "category": "Baterai & Pengisian Daya"},
+    "G07": {"text": "Persentase baterai turun drastis / HP mati mendadak saat baterai masih tersisa", "category": "Baterai & Pengisian Daya"},
+    "G08": {"text": "Baterai tampak menggembung (bodi/layar terangkat)", "category": "Baterai & Pengisian Daya"},
+    "G09": {"text": "HP tidak bisa mengisi daya", "category": "Baterai & Pengisian Daya"},
+    "G10": {"text": "Pengisian daya sangat lambat", "category": "Baterai & Pengisian Daya"},
+    "G11": {"text": "Port charger longgar/kotor, atau kabel harus ditekuk agar mengisi", "category": "Baterai & Pengisian Daya"},
+    "G12": {"text": "HP terasa panas berlebihan", "category": "Baterai & Pengisian Daya"},
+    "G13": {"text": "Aplikasi sering menutup sendiri (force close)", "category": "Sistem & Aplikasi"},
+    "G14": {"text": "HP lambat / sering lag", "category": "Sistem & Aplikasi"},
+    "G15": {"text": "Penyimpanan internal hampir penuh", "category": "Sistem & Aplikasi"},
+    "G16": {"text": "HP restart sendiri atau terjebak bootloop", "category": "Sistem & Aplikasi"},
+    "G17": {"text": "HP tidak bisa menyala sama sekali", "category": "Sistem & Aplikasi"},
+    "G18": {"text": "Gejala mulai muncul setelah update sistem atau instal aplikasi baru", "category": "Sistem & Aplikasi"},
+    "G19": {"text": "Sinyal seluler hilang / kartu SIM tidak terdeteksi", "category": "Jaringan & Konektivitas"},
+    "G20": {"text": "Wi-Fi atau Bluetooth sering terputus", "category": "Jaringan & Konektivitas"},
+    "G21": {"text": "Suara speaker/mikrofon tidak keluar, pecah, atau lawan bicara tidak terdengar", "category": "Audio, Kamera & Sensor"},
+    "G22": {"text": "Kamera blur, hitam, atau error", "category": "Audio, Kamera & Sensor"},
+    "G23": {"text": "Tombol fisik (power/volume) tidak berfungsi", "category": "Audio, Kamera & Sensor"},
+    "G24": {"text": "Sensor sidik jari tidak berfungsi", "category": "Audio, Kamera & Sensor"},
+    "G25": {"text": "HP pernah jatuh atau terbentur", "category": "Riwayat Fisik"},
+    "G26": {"text": "HP pernah terkena air atau cairan", "category": "Riwayat Fisik"}
+  },
+  "facts": {
+    "F01": {"text": "Indikasi kerusakan fisik akibat benturan"},
+    "F02": {"text": "Indikasi masalah daya/baterai"},
+    "F03": {"text": "Indikasi gangguan sistem operasi/aplikasi"},
+    "F04": {"text": "Indikasi gangguan unit layar/sentuh"}
+  },
+  "diagnoses": {
+    "D01": {
+      "name": "Kerusakan Touchscreen/Digitizer", "category": "Hardware", "severity": "Sedang",
+      "description": "Panel sentuh (digitizer) gagal membaca sentuhan, umumnya akibat benturan, tekanan, atau konektor flex yang longgar.",
+      "solutions": ["Restart HP, lepas casing/pelindung layar, dan bersihkan layar dari air atau minyak.", "Jika tetap tidak merespons, bawa ke teknisi untuk cek konektor flex atau penggantian digitizer/LCD."],
+      "prevention": ["Gunakan tempered glass dan casing pelindung.", "Hindari menekan layar terlalu keras."]
+    },
+    "D02": {
+      "name": "Kerusakan Panel LCD/Display", "category": "Hardware", "severity": "Sedang",
+      "description": "Panel tampilan rusak sehingga muncul garis, bercak, kedipan, atau layar gelap meski HP menyala.",
+      "solutions": ["Hubungkan ke monitor eksternal (jika didukung) untuk memastikan masalah ada di panel.", "Ganti panel LCD/OLED di teknisi atau service center resmi."],
+      "prevention": ["Gunakan casing yang melindungi sudut.", "Hindari menjatuhkan atau menindih HP."]
+    },
+    "D03": {
+      "name": "Baterai Aus (Degradasi Kapasitas)", "category": "Hardware", "severity": "Ringan",
+      "description": "Kapasitas baterai menurun karena usia dan siklus pengisian sehingga daya cepat habis atau HP mati mendadak.",
+      "solutions": ["Cek kesehatan baterai (battery health) lewat pengaturan atau aplikasi diagnostik.", "Kurangi kecerahan layar dan aplikasi latar belakang.", "Ganti baterai di teknisi atau service center resmi."],
+      "prevention": ["Hindari baterai sering 0% atau terus 100%.", "Gunakan charger yang sesuai spesifikasi."]
+    },
+    "D04": {
+      "name": "Baterai Menggembung", "category": "Hardware", "severity": "Berbahaya",
+      "description": "Baterai mengembung akibat penumpukan gas sehingga berisiko bocor, panas, atau terbakar.",
+      "solutions": ["Segera hentikan penggunaan dan jangan mengisi daya.", "Jangan menekan atau menusuk baterai.", "Segera bawa ke service center untuk penggantian baterai."],
+      "prevention": ["Hindari charger abal-abal dan paparan panas.", "Ganti baterai yang sudah lama dipakai."]
+    },
+    "D05": {
+      "name": "Port Charger Kotor/Rusak", "category": "Hardware", "severity": "Ringan",
+      "description": "Port pengisian tertutup kotoran atau konektor longgar sehingga kontak dengan kabel tidak stabil.",
+      "solutions": ["Matikan HP, bersihkan port dengan tusuk gigi kayu atau sikat halus (jangan logam).", "Coba kabel dan adaptor lain.", "Jika konektor longgar, ganti port di teknisi."],
+      "prevention": ["Hindari menyimpan HP di saku berdebu tanpa pelindung.", "Cabut kabel dengan lurus, jangan ditarik miring."]
+    },
+    "D06": {
+      "name": "Kerusakan IC Charging/Power", "category": "Hardware", "severity": "Berat",
+      "description": "Komponen pengatur daya pada motherboard bermasalah sehingga pengisian gagal, lambat, atau HP panas saat dicas.",
+      "solutions": ["Pastikan kabel dan adaptor normal terlebih dahulu.", "Bawa ke teknisi mikro-solder untuk pengecekan IC charging pada motherboard."],
+      "prevention": ["Gunakan charger original/bersertifikat.", "Hindari mengisi daya saat HP terkena panas atau lembap."]
+    },
+    "D07": {
+      "name": "Kerusakan Akibat Cairan", "category": "Hardware", "severity": "Berat",
+      "description": "Cairan masuk ke bodi dan menyebabkan korsleting atau korosi pada komponen.",
+      "solutions": ["Matikan HP segera dan jangan diisi daya.", "Lap bagian luar dan jangan gunakan pemanas/hair dryer panas.", "Segera bawa ke teknisi untuk dibongkar dan dibersihkan sebelum korosi meluas."],
+      "prevention": ["Gunakan pouch tahan air saat di area basah.", "Jangan mengisi daya dengan port yang lembap."]
+    },
+    "D08": {
+      "name": "Memori Penyimpanan Penuh", "category": "Software", "severity": "Ringan",
+      "description": "Ruang penyimpanan hampir habis sehingga sistem dan aplikasi melambat atau menutup sendiri.",
+      "solutions": ["Hapus file/aplikasi tidak terpakai dan bersihkan cache.", "Pindahkan foto/video ke cloud atau komputer.", "Sisakan minimal 10-15% ruang kosong."],
+      "prevention": ["Backup berkala dan hapus unduhan tidak perlu."]
+    },
+    "D09": {
+      "name": "Aplikasi Bermasalah / Bug", "category": "Software", "severity": "Ringan",
+      "description": "Aplikasi tidak kompatibel, rusak, atau bug setelah update sehingga sering force close.",
+      "solutions": ["Perbarui atau instal ulang aplikasi bermasalah.", "Hapus cache dan data aplikasi.", "Copot aplikasi yang baru dipasang jika masalah muncul setelahnya."],
+      "prevention": ["Unduh aplikasi hanya dari toko resmi.", "Jaga sistem dan aplikasi tetap terbaru."]
+    },
+    "D10": {
+      "name": "Sistem Operasi Korup / Bootloop", "category": "Software", "severity": "Sedang",
+      "description": "File sistem rusak, umumnya setelah update gagal atau instal aplikasi tertentu, sehingga HP restart terus.",
+      "solutions": ["Masuk safe mode lalu hapus aplikasi yang baru dipasang.", "Lakukan wipe cache partition lewat recovery mode.", "Jika gagal, lakukan factory reset atau flash ulang firmware (backup bila memungkinkan)."],
+      "prevention": ["Jangan menghentikan update di tengah proses.", "Pastikan baterai cukup saat update."]
+    },
+    "D11": {
+      "name": "Overheating Akibat Beban Sistem", "category": "Software", "severity": "Sedang",
+      "description": "Proses latar belakang atau aplikasi berat membuat prosesor bekerja terus sehingga HP panas.",
+      "solutions": ["Tutup aplikasi yang berjalan di latar belakang.", "Lepas casing tebal dan hindari paparan sinar matahari.", "Matikan fitur yang tidak perlu (GPS, Bluetooth, sinkronisasi)."],
+      "prevention": ["Hindari bermain game berat sambil mengisi daya.", "Jaga sistem tetap terbaru."]
+    },
+    "D12": {
+      "name": "Kerusakan Modul Jaringan/Antena", "category": "Hardware", "severity": "Sedang",
+      "description": "Antena atau modul jaringan rusak akibat benturan atau cairan sehingga sinyal hilang atau tidak stabil.",
+      "solutions": ["Coba SIM di HP lain untuk memastikan kartu SIM normal.", "Bersihkan slot SIM dan pasang ulang.", "Bawa ke teknisi untuk cek antena atau IC sinyal."],
+      "prevention": ["Lindungi HP dari benturan dan cairan."]
+    },
+    "D13": {
+      "name": "Kerusakan Speaker/Mikrofon", "category": "Hardware", "severity": "Ringan",
+      "description": "Speaker atau mikrofon tertutup kotoran atau rusak sehingga suara tidak keluar atau pecah.",
+      "solutions": ["Bersihkan lubang speaker/mikrofon dengan sikat halus.", "Periksa pengaturan volume dan mode Bluetooth.", "Ganti komponen di teknisi bila tetap bermasalah."],
+      "prevention": ["Hindari volume maksimum terlalu lama.", "Jaga lubang audio dari debu dan cairan."]
+    },
+    "D14": {
+      "name": "Kerusakan Modul Kamera", "category": "Hardware", "severity": "Sedang",
+      "description": "Lensa atau sensor kamera rusak sehingga gambar blur, hitam, atau kamera error.",
+      "solutions": ["Bersihkan lensa dan lepas pelindung lensa.", "Restart dan coba aplikasi kamera lain.", "Ganti modul kamera di teknisi bila tetap bermasalah."],
+      "prevention": ["Gunakan pelindung lensa dan hindari guncangan keras."]
+    },
+    "D15": {
+      "name": "Malware / Adware", "category": "Software", "severity": "Sedang",
+      "description": "Aplikasi berbahaya berjalan di latar belakang sehingga HP lambat, panas, dan baterai boros.",
+      "solutions": ["Pindai dengan aplikasi keamanan tepercaya.", "Copot aplikasi mencurigakan dan cabut izin administrator.", "Jika tetap, lakukan factory reset setelah backup."],
+      "prevention": ["Hindari instal dari sumber tidak resmi (APK bajakan).", "Jangan klik tautan mencurigakan."]
+    },
+    "D16": {
+      "name": "Kerusakan Tombol Fisik/Sensor", "category": "Hardware", "severity": "Ringan",
+      "description": "Tombol fisik atau sensor sidik jari rusak/aus atau terkena benturan.",
+      "solutions": ["Bersihkan area tombol/sensor dan lepas pelindung layar yang menutupi sensor.", "Daftarkan ulang sidik jari.", "Ganti flex tombol/sensor di teknisi bila tetap bermasalah."],
+      "prevention": ["Jangan menekan tombol terlalu keras."]
+    },
+    "D17": {
+      "name": "Konfigurasi Jaringan/Software Radio Bermasalah", "category": "Software", "severity": "Ringan",
+      "description": "Pengaturan jaringan atau firmware radio bermasalah setelah update sehingga sinyal atau koneksi tidak stabil.",
+      "solutions": ["Aktifkan lalu matikan mode pesawat, restart HP.", "Reset pengaturan jaringan (Wi-Fi, seluler, Bluetooth).", "Perbarui sistem atau lakukan factory reset bila perlu."],
+      "prevention": ["Perbarui sistem secara berkala dari sumber resmi."]
+    }
+  },
+  "rules": {
+    "R01": {"if": ["G25"], "then": "F01", "cf": 0.9, "description": "Riwayat jatuh mengindikasikan kerusakan fisik", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R02": {"if": ["G02"], "then": "F01", "cf": 0.95, "description": "Layar retak mengindikasikan benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R03": {"if": ["G06"], "then": "F02", "cf": 0.6, "description": "Baterai boros mengindikasikan masalah daya", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R04": {"if": ["G07"], "then": "F02", "cf": 0.8, "description": "Persentase turun drastis mengindikasikan masalah baterai", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R05": {"if": ["G09"], "then": "F02", "cf": 0.6, "description": "Tidak bisa mengisi mengindikasikan masalah daya", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R06": {"if": ["G10"], "then": "F02", "cf": 0.5, "description": "Pengisian lambat mengindikasikan masalah daya", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R07": {"if": ["G13", "G14"], "then": "F03", "cf": 0.7, "description": "Force close disertai lag mengindikasikan gangguan sistem", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R08": {"if": ["G16"], "then": "F03", "cf": 0.6, "description": "Restart sendiri mengindikasikan gangguan sistem", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R09": {"if": ["G18"], "then": "F03", "cf": 0.6, "description": "Masalah setelah update mengindikasikan gangguan sistem", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R10": {"if": ["G01"], "then": "F04", "cf": 0.5, "description": "Sentuhan tidak merespons mengindikasikan gangguan unit layar", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R11": {"if": ["G03"], "then": "F04", "cf": 0.7, "description": "Garis/bercak mengindikasikan gangguan unit layar", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R12": {"if": ["G04"], "then": "F04", "cf": 0.6, "description": "Layar berkedip mengindikasikan gangguan unit layar", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R13": {"if": ["G05"], "then": "F04", "cf": 0.7, "description": "Layar gelap tapi HP menyala mengindikasikan gangguan unit layar", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R14": {"if": ["G01", "F01"], "then": "D01", "cf": 0.85, "description": "Sentuhan mati setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R15": {"if": ["G01", "G04"], "then": "D01", "cf": 0.6, "description": "Sentuhan mati disertai layar berkedip", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R16": {"if": ["G01", "G26"], "then": "D01", "cf": 0.5, "description": "Sentuhan mati setelah terkena cairan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R17": {"if": ["G03", "F01"], "then": "D02", "cf": 0.9, "description": "Garis/bercak setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R18": {"if": ["G02", "G03"], "then": "D02", "cf": 0.9, "description": "Layar retak disertai garis/bercak", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R19": {"if": ["G05", "F01"], "then": "D02", "cf": 0.8, "description": "Layar gelap tapi menyala setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R20": {"if": ["G04", "G03"], "then": "D02", "cf": 0.7, "description": "Layar berkedip disertai garis/bercak", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R21": {"if": ["G04", "F01"], "then": "D02", "cf": 0.7, "description": "Layar berkedip setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R22": {"if": ["G06", "G07"], "then": "D03", "cf": 0.85, "description": "Baterai boros disertai persentase turun drastis", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R23": {"if": ["G06", "G12"], "then": "D03", "cf": 0.6, "description": "Baterai boros disertai HP panas", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R24": {"if": ["G07", "G16"], "then": "D03", "cf": 0.6, "description": "Mati mendadak disertai restart sendiri", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R25": {"if": ["G08"], "then": "D04", "cf": 0.9, "description": "Bodi/layar terangkat menandakan baterai menggembung", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R26": {"if": ["G08", "G12"], "then": "D04", "cf": 0.85, "description": "Menggembung disertai panas berlebih", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R27": {"if": ["G09", "G11"], "then": "D05", "cf": 0.9, "description": "Tidak mengisi dan port longgar/kotor", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R28": {"if": ["G10", "G11"], "then": "D05", "cf": 0.8, "description": "Pengisian lambat dan port longgar/kotor", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R29": {"if": ["G09", "F01"], "then": "D05", "cf": 0.6, "description": "Tidak mengisi setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R30": {"if": ["G09", "G16"], "then": "D06", "cf": 0.6, "description": "Tidak mengisi disertai restart sendiri", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R31": {"if": ["G09", "G17"], "then": "D06", "cf": 0.7, "description": "Tidak mengisi dan HP mati total", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R32": {"if": ["G10", "G12"], "then": "D06", "cf": 0.5, "description": "Pengisian lambat disertai panas", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R33": {"if": ["G26", "G17"], "then": "D07", "cf": 0.9, "description": "Terkena cairan lalu HP mati total", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R34": {"if": ["G26", "F02"], "then": "D07", "cf": 0.75, "description": "Terkena cairan disertai masalah daya", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R35": {"if": ["G26", "G04"], "then": "D07", "cf": 0.7, "description": "Terkena cairan disertai layar berkedip", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R36": {"if": ["G26", "G21"], "then": "D07", "cf": 0.7, "description": "Terkena cairan disertai masalah audio", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R37": {"if": ["G15", "G14"], "then": "D08", "cf": 0.85, "description": "Penyimpanan penuh disertai lag", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R38": {"if": ["G15", "G13"], "then": "D08", "cf": 0.75, "description": "Penyimpanan penuh disertai force close", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R65": {"if": ["F03", "G15"], "then": "D08", "cf": 0.5, "description": "Gangguan sistem dengan penyimpanan hampir penuh", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R39": {"if": ["G13", "G18"], "then": "D09", "cf": 0.8, "description": "Force close setelah update/instal aplikasi", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R40": {"if": ["G13"], "then": "D09", "cf": 0.5, "description": "Force close umumnya terkait aplikasi", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R41": {"if": ["G22", "G18"], "then": "D09", "cf": 0.5, "description": "Kamera error setelah update", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R42": {"if": ["G16", "G18"], "then": "D10", "cf": 0.85, "description": "Bootloop setelah update/instal aplikasi", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R43": {"if": ["G16", "G14"], "then": "D10", "cf": 0.6, "description": "Restart sendiri disertai lag", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R44": {"if": ["G17", "G18"], "then": "D10", "cf": 0.7, "description": "Tidak menyala setelah update", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R45": {"if": ["G12", "G14"], "then": "D11", "cf": 0.7, "description": "Panas disertai lag", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R46": {"if": ["G12", "G13"], "then": "D11", "cf": 0.5, "description": "Panas disertai force close", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R47": {"if": ["G19", "F01"], "then": "D12", "cf": 0.8, "description": "Sinyal hilang setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R48": {"if": ["G19", "G26"], "then": "D12", "cf": 0.7, "description": "Sinyal hilang setelah terkena cairan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R49": {"if": ["G19", "G20"], "then": "D12", "cf": 0.6, "description": "Sinyal hilang disertai Wi-Fi/Bluetooth putus", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R50": {"if": ["G20", "F01"], "then": "D12", "cf": 0.6, "description": "Wi-Fi/Bluetooth putus setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R51": {"if": ["G21", "F01"], "then": "D13", "cf": 0.85, "description": "Masalah audio setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R52": {"if": ["G21", "G26"], "then": "D13", "cf": 0.7, "description": "Masalah audio setelah terkena cairan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R53": {"if": ["G21"], "then": "D13", "cf": 0.5, "description": "Masalah audio umumnya terkait speaker/mikrofon", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R54": {"if": ["G22", "F01"], "then": "D14", "cf": 0.85, "description": "Kamera bermasalah setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R55": {"if": ["G22", "G26"], "then": "D14", "cf": 0.7, "description": "Kamera bermasalah setelah terkena cairan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R56": {"if": ["G22"], "then": "D14", "cf": 0.4, "description": "Kamera bermasalah dugaan modul kamera", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R57": {"if": ["G12", "G14", "G06"], "then": "D15", "cf": 0.6, "description": "Panas, lag, dan baterai boros bersamaan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R58": {"if": ["G13", "G14", "G12"], "then": "D15", "cf": 0.6, "description": "Force close, lag, dan panas bersamaan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R59": {"if": ["G23", "F01"], "then": "D16", "cf": 0.8, "description": "Tombol rusak setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R60": {"if": ["G24", "F01"], "then": "D16", "cf": 0.7, "description": "Sensor sidik jari rusak setelah benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R61": {"if": ["G23"], "then": "D16", "cf": 0.5, "description": "Tombol fisik tidak berfungsi", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R62": {"if": ["G24"], "then": "D16", "cf": 0.4, "description": "Sensor sidik jari tidak berfungsi", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R63": {"if": ["G19", "G18"], "then": "D17", "cf": 0.8, "description": "Sinyal hilang setelah update", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R64": {"if": ["G20"], "then": "D17", "cf": 0.5, "description": "Wi-Fi/Bluetooth putus umumnya konfigurasi", "source": "Heuristik servis HP (perlu validasi pakar)"},
+
+    "R66": {"if": ["F04", "F01"], "then": "D02", "cf": 0.6, "description": "Gangguan unit layar disertai benturan", "source": "Heuristik servis HP (perlu validasi pakar)"},
+    "R67": {"if": ["F02", "G12"], "then": "D06", "cf": 0.4, "description": "Masalah daya disertai panas", "source": "Heuristik servis HP (perlu validasi pakar)"}
+  }
+}
