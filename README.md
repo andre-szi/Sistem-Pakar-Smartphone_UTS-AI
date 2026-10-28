@@ -84,22 +84,5 @@ Penjelasan:
 Rekomendasi: Hubungkan ke monitor eksternal ... Ganti panel LCD/OLED di teknisi.
 ```
 
-(Jalankan sendiri untuk angka terkini; tambahkan screenshot aplikasi di folder `docs/screenshots/`.)
 
-## Validasi Pengetahuan (PENTING)
 
-Rule dan nilai CF awal disusun dari heuristik umum servis smartphone, **bukan** dari satu sumber literatur
-tertentu. Sebelum dikumpulkan, kelompok perlu:
-
-1. Mewawancarai teknisi/service center ponsel dan mencatat nama, tempat, serta tanggal wawancara.
-2. Mencocokkan rule dengan literatur kredibel (manual servis, dokumentasi vendor, jurnal/buku) dan mengisi
-   kolom `source` pada tiap rule dengan rujukan yang sebenarnya.
-3. Menyesuaikan nilai CF berdasarkan masukan pakar, lalu menjalankan ulang pengujian.
-
-## Kontribusi Tim
-
-Isi tabel kontribusi tiap anggota (modul, tugas, jumlah commit) di sini.
-
-## Lisensi
-
-Proyek akademik.
