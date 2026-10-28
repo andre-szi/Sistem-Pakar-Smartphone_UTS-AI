@@ -1,0 +1,276 @@
+[
+  {
+    "id": "50b4d904",
+    "timestamp": "2026-10-26T23:02:15",
+    "user_name": "Anonim",
+    "device": "",
+    "mode": "forward",
+    "goal": null,
+    "facts": {
+      "G02": 0.8,
+      "G10": 0.8,
+      "G17": 0.8,
+      "G19": 0.8,
+      "G23": 0.8,
+      "G25": 0.8
+    },
+    "conclusions": [
+      {
+        "id": "D16",
+        "name": "Kerusakan Tombol Fisik/Sensor",
+        "category": "Hardware",
+        "cf": 0.784
+      },
+      {
+        "id": "D12",
+        "name": "Kerusakan Modul Jaringan/Antena",
+        "category": "Hardware",
+        "cf": 0.64
+      }
+    ],
+    "rules_fired": [
+      "R02",
+      "R01",
+      "R06",
+      "R61",
+      "R47",
+      "R59"
+    ],
+    "verdict": "Hardware"
+  },
+  {
+    "id": "9179bd98",
+    "timestamp": "2026-10-27T20:44:07",
+    "user_name": "Anonim",
+    "device": "",
+    "mode": "forward",
+    "goal": null,
+    "facts": {
+      "G03": 1.0,
+      "G04": 0.8
+    },
+    "conclusions": [
+      {
+        "id": "D02",
+        "name": "Kerusakan Panel LCD/Display",
+        "category": "Hardware",
+        "cf": 0.56
+      }
+    ],
+    "rules_fired": [
+      "R20",
+      "R11",
+      "R12"
+    ],
+    "verdict": "Hardware"
+  },
+  {
+    "id": "9b53b571",
+    "timestamp": "2026-10-27T22:14:05",
+    "user_name": "Anonim",
+    "device": "",
+    "mode": "forward",
+    "goal": null,
+    "facts": {
+      "G02": 0.8,
+      "G01": 0.8,
+      "G06": 0.8
+    },
+    "conclusions": [
+      {
+        "id": "D01",
+        "name": "Kerusakan Touchscreen/Digitizer",
+        "category": "Hardware",
+        "cf": 0.646
+      },
+      {
+        "id": "D02",
+        "name": "Kerusakan Panel LCD/Display",
+        "category": "Hardware",
+        "cf": 0.24
+      }
+    ],
+    "rules_fired": [
+      "R02",
+      "R03",
+      "R10",
+      "R14",
+      "R66"
+    ],
+    "verdict": "Hardware"
+  },
+  {
+    "id": "baa248d3",
+    "timestamp": "2026-10-27T23:01:45",
+    "user_name": "Anonim",
+    "device": "",
+    "mode": "forward",
+    "goal": null,
+    "facts": {
+      "G01": 1.0,
+      "G02": 1.0,
+      "G09": 1.0,
+      "G14": 1.0,
+      "G20": 0.8
+    },
+    "conclusions": [
+      {
+        "id": "D01",
+        "name": "Kerusakan Touchscreen/Digitizer",
+        "category": "Hardware",
+        "cf": 0.8075
+      },
+      {
+        "id": "D05",
+        "name": "Port Charger Kotor/Rusak",
+        "category": "Hardware",
+        "cf": 0.57
+      },
+      {
+        "id": "D12",
+        "name": "Kerusakan Modul Jaringan/Antena",
+        "category": "Hardware",
+        "cf": 0.48
+      },
+      {
+        "id": "D17",
+        "name": "Konfigurasi Jaringan/Software Radio Bermasalah",
+        "category": "Software",
+        "cf": 0.4
+      },
+      {
+        "id": "D02",
+        "name": "Kerusakan Panel LCD/Display",
+        "category": "Hardware",
+        "cf": 0.3
+      }
+    ],
+    "rules_fired": [
+      "R02",
+      "R05",
+      "R10",
+      "R64",
+      "R14",
+      "R29",
+      "R50",
+      "R66"
+    ],
+    "verdict": "Hardware"
+  },
+  {
+    "id": "dad109b5",
+    "timestamp": "2026-10-27T23:16:56",
+    "user_name": "andre",
+    "device": "iphone",
+    "mode": "forward",
+    "goal": null,
+    "facts": {
+      "G01": 0.8,
+      "G02": 0.8,
+      "G09": 1.0,
+      "G14": 1.0,
+      "G20": 0.8
+    },
+    "conclusions": [
+      {
+        "id": "D01",
+        "name": "Kerusakan Touchscreen/Digitizer",
+        "category": "Hardware",
+        "cf": 0.646
+      },
+      {
+        "id": "D05",
+        "name": "Port Charger Kotor/Rusak",
+        "category": "Hardware",
+        "cf": 0.456
+      },
+      {
+        "id": "D12",
+        "name": "Kerusakan Modul Jaringan/Antena",
+        "category": "Hardware",
+        "cf": 0.456
+      },
+      {
+        "id": "D17",
+        "name": "Konfigurasi Jaringan/Software Radio Bermasalah",
+        "category": "Software",
+        "cf": 0.4
+      },
+      {
+        "id": "D02",
+        "name": "Kerusakan Panel LCD/Display",
+        "category": "Hardware",
+        "cf": 0.24
+      }
+    ],
+    "rules_fired": [
+      "R02",
+      "R05",
+      "R10",
+      "R64",
+      "R14",
+      "R29",
+      "R50",
+      "R66"
+    ],
+    "verdict": "Hardware"
+  },
+  {
+    "id": "759881b4",
+    "timestamp": "2026-10-27T23:16:58",
+    "user_name": "andre",
+    "device": "iphone",
+    "mode": "forward",
+    "goal": null,
+    "facts": {
+      "G01": 0.8,
+      "G02": 0.8,
+      "G09": 1.0,
+      "G14": 1.0,
+      "G20": 0.8
+    },
+    "conclusions": [
+      {
+        "id": "D01",
+        "name": "Kerusakan Touchscreen/Digitizer",
+        "category": "Hardware",
+        "cf": 0.646
+      },
+      {
+        "id": "D05",
+        "name": "Port Charger Kotor/Rusak",
+        "category": "Hardware",
+        "cf": 0.456
+      },
+      {
+        "id": "D12",
+        "name": "Kerusakan Modul Jaringan/Antena",
+        "category": "Hardware",
+        "cf": 0.456
+      },
+      {
+        "id": "D17",
+        "name": "Konfigurasi Jaringan/Software Radio Bermasalah",
+        "category": "Software",
+        "cf": 0.4
+      },
+      {
+        "id": "D02",
+        "name": "Kerusakan Panel LCD/Display",
+        "category": "Hardware",
+        "cf": 0.24
+      }
+    ],
+    "rules_fired": [
+      "R02",
+      "R05",
+      "R10",
+      "R64",
+      "R14",
+      "R29",
+      "R50",
+      "R66"
+    ],
+    "verdict": "Hardware"
+  }
+]
